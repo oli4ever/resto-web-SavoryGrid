@@ -5,13 +5,17 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "installCommand": "npm install --ignore-scripts"
       }
     }
   ],
-
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false,
   "env": {
