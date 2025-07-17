@@ -8,13 +8,5 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false,
     chunkSizeWarningLimit: 1600,
-  },
-  server: {
-    port: 3000,
-    strictPort: true,
-  },
-  preview: {
-    port: 3000,
-    strictPort: true,
-  }
+  } 
 })
