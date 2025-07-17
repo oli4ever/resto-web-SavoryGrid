@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "fix": "npm audit fix",
-    "prepare": "if [ -d .git ]; then husky install; fi"
+    "fix": "npm audit fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -28,7 +27,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^7.0.5"
   },
   "engines": {
     "node": ">=16.0.0",
