@@ -1,5 +1,9 @@
 # 🍽️ SavoryGrid - Restaurant Website
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://savorygrid.vercel.app/)
+[![GitHub](https://img.shields.io/badge/source-code-blue)](https://github.com/oli4ever/resto-web-SavoryGrid)
+[![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
+
 ![SavoryGrid Banner](https://i.imgur.com/WMqew8u.jpeg)
 
 A modern, responsive restaurant website built with React and Tailwind CSS, showcasing delicious cuisine with elegant design.
