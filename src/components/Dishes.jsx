@@ -1,10 +1,10 @@
 import React from "react";
-import img1 from "../assets/img/img1.jpg";
-import img2 from "../assets/img/img2.jpg";
-import img3 from "../assets/img/img3.jpg";
-import img4 from "../assets/img/img4.jpg";
-import img5 from "../assets/img/img5.jpg";
-import img6 from "../assets/img/img6.jpg";
+import img1 from "/assets/img/img1.jpg";
+import img2 from "/assets/img/img2.jpg";
+import img3 from "/assets/img/img3.jpg";
+import img4 from "/assets/img/img4.jpg";
+import img5 from "/assets/img/img5.jpg";
+import img6 from "/assets/img/img6.jpg";
 import DishesCard from "../layouts/DishesCard";
 
 const Dishes = () => {
@@ -18,7 +18,7 @@ const Dishes = () => {
         <DishesCard img={img1} title="Baked Chicken Wings" price="$10.99" />
         <DishesCard img={img2} title="Grilled Beef Steak" price="$12.99" />
         <DishesCard img={img3} title="Tasty Pasta" price="$10.50" />
-        <DishesCard img={img4} title="chicken Shish Kebab" price="$11.50" />
+        <DishesCard img={img4} title="Chicken Shish Kebab" price="$11.50" />
         <DishesCard img={img5} title="Chicken Fried Rice" price="$13.99" />
         <DishesCard img={img6} title="Bangladeshi Sweet" price="$14.00" />
       </div>

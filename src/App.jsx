@@ -5,7 +5,7 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Dishes from "./components/Dishes";
-import Reviews from "./components/Review";
+import Reservation from "./components/Reservation";
 import Review from "./components/Review";
 
 const App = () => {
@@ -28,6 +28,10 @@ const App = () => {
 
         <div id="menu">
           <Menu />
+        </div>
+
+        <div id="reservation">
+          <Reservation />
         </div>
 
         <div id="review">

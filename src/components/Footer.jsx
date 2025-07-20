@@ -6,17 +6,17 @@ import { Link } from "react-scroll";
 const Footer = () => {
   return (
     <div className="bg-black text-white rounded-t-3xl mt-8 md:mt-0">
-      <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
+      <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5 text-center md:text-left gap-8">
         <div className="w-full md:w-1/4">
-          <h1 className="font-semibold text-xl pb-4 text-brightColor">
+          <h1 className="font-bold text-xl pb-4 text-brightColor ">
             SavoryGrid
           </h1>
-          <p className="text-sm">
+          <p className="text-sm ">
             Where culinary artistry meets unforgettable dining experiences.
           </p>
         </div>
         <div>
-          <h1 className="font-medium text-xl pb-4 pt-5 md:pt-0 text-lightText">
+          <h1 className="font-bold text-xl pb-4 pt-5 md:pt-0 text-normalText">
             Quick Links
           </h1>
           <nav className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const Footer = () => {
           </nav>
         </div>
         <div>
-          <h1 className="font-medium text-xl pb-4 pt-5 md:pt-0 text-lightText">
+          <h1 className="font-bold text-xl pb-4 pt-5 md:pt-0 text-normalText">
             Discover
           </h1>
           <nav className="flex flex-col gap-2">
@@ -84,7 +84,7 @@ const Footer = () => {
           </nav>
         </div>
         <div>
-          <h1 className="font-medium text-xl pb-4 pt-5 md:pt-0 text-lightText">
+          <h1 className="font-bold text-xl pb-4 pt-5 md:pt-0 text-normalText">
             Connect With Us
           </h1>
           <nav className="flex flex-col gap-2">
@@ -100,7 +100,7 @@ const Footer = () => {
             >
               +88 01720 235 330
             </a>
-            <div className="flex gap-4 pt-2">
+            <div className="flex justify-center gap-4 pt-2">
               <a
                 href="https://facebook.com"
                 target="_blank"
