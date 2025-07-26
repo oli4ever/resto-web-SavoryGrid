@@ -123,8 +123,6 @@ const Navbar = () => {
             >
               Reviews
             </Link>
-
-            <Button title="Login" />
           </nav>
 
           <div className="lg:hidden flex items-center">
@@ -202,8 +200,6 @@ const Navbar = () => {
           >
             Reviews
           </Link>
-
-          <Button title="login" />
         </div>
       </div>
     </div>

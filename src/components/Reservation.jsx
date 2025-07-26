@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import {
   Calendar,
   Clock,
@@ -9,6 +10,7 @@ import {
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
+emailjs.init("gkuIrujmYa6kA-IOo");
 
 const Reservation = () => {
   const [formData, setFormData] = useState({
@@ -102,28 +104,48 @@ const Reservation = () => {
     }
   };
 
+  const sendConfirmationEmail = () => {
+    return emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_yyax9gb",
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_cpoxlw9",
+      {
+        to_name: formData.name,
+        guest_count: formData.guests,
+        reservation_date: new Date(formData.date).toLocaleDateString(),
+        reservation_time: formData.time,
+        email: formData.email,
+        phone: formData.phone,
+        occasion: formData.occasion,
+        special_requests: formData.specialRequests || "None",
+      },
+      import.meta.env.VITE_EMAILJS_USER_ID || "gkuIrujmYa6kA-IOo"
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     setIsLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
+    try {
+      // First send the email
+      await sendConfirmationEmail();
 
-      // Store reservation in memory (in real app, this would be sent to backend)
       const reservation = {
         id: Date.now(),
         ...formData,
         status: "confirmed",
         createdAt: new Date().toISOString(),
       };
-
       console.log("Reservation created:", reservation);
-    }, 1500);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      alert("Failed to send confirmation. Please try WhatsApp: +8801720235330");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const resetForm = () => {
